@@ -4,6 +4,9 @@ using RabbitMQ.Client;
 
 namespace RabbitMQConsumer
 {
+    /// <summary>
+    /// consumer
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
