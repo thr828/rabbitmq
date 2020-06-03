@@ -5,8 +5,7 @@ using RabbitMQ.Client;
 namespace RabbitMQConsumer
 {
     /// <summary>
-    /// consumer
-    /// </summary>
+    /// consumer（单纯的接收队列中的一个消息）
     class Program
     {
         static void Main(string[] args)
@@ -22,6 +21,7 @@ namespace RabbitMQConsumer
 
            var channel = connection.CreateModel();
 
+           //此处只是单纯的接收队列中的一个消息
            var result = channel.BasicGet("mytest2", true);
            if (result != null)
            {
