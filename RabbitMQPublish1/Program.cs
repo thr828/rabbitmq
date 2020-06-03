@@ -21,8 +21,8 @@ namespace RabbitMQPublish1
             {
                 using (var channel=connection.CreateModel())
                 {
-                    //1.使用默认的exchange ampq default 
-                    //或者声明其他的exchange
+                    //1.使用默认的exchange ampq default  ，就不需要声明exchange
+                    // 或者声明其他的exchange（AMPQ direct，fanout、headers、topic）
                     channel.ExchangeDeclare("myexchange",ExchangeType.Direct,true,false,null);
                     
                     //2.声明队列
