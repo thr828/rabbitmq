@@ -11,7 +11,12 @@ namespace RabbitMQPublish2
     {
         static void Main(string[] args)
         {
-           ConnectionFactory connectionFactory=new ConnectionFactory();
+           ConnectionFactory connectionFactory=new ConnectionFactory()
+           {
+               HostName = "127.0.0.1",
+               UserName = "datamip",
+               Password = "datamip",
+           };
            using (var connection=connectionFactory.CreateConnection())
            {
                using (var  channel=connection.CreateModel())

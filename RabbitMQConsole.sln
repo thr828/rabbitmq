@@ -14,6 +14,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQConsumer2Else", "Ra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQConsumer2Error", "RabbitMQConsumer2Error\RabbitMQConsumer2Error.csproj", "{CCD7CEA3-883B-4D36-9EBF-5401AB39500E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FanoutExchange", "FanoutExchange", "{DE8BE995-0373-47C3-8588-5F20E3875776}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQPublish", "FanoutExchange\RabbitMQPublish\RabbitMQPublish.csproj", "{5D875DE4-9BE3-4E04-8178-1F2A32D5CF3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanoutConsumer1", "FanoutExchange\FanoutConsumer1\FanoutConsumer1.csproj", "{9839929F-BEAF-4932-8DB6-A19D178D4B13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanoutConsumer2", "FanoutExchange\FanoutConsumer2\FanoutConsumer2.csproj", "{CCF8A61C-34C6-4AC4-9024-E9576AE77087}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +56,22 @@ Global
 		{CCD7CEA3-883B-4D36-9EBF-5401AB39500E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCD7CEA3-883B-4D36-9EBF-5401AB39500E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCD7CEA3-883B-4D36-9EBF-5401AB39500E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D875DE4-9BE3-4E04-8178-1F2A32D5CF3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D875DE4-9BE3-4E04-8178-1F2A32D5CF3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D875DE4-9BE3-4E04-8178-1F2A32D5CF3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D875DE4-9BE3-4E04-8178-1F2A32D5CF3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9839929F-BEAF-4932-8DB6-A19D178D4B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9839929F-BEAF-4932-8DB6-A19D178D4B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9839929F-BEAF-4932-8DB6-A19D178D4B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9839929F-BEAF-4932-8DB6-A19D178D4B13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCF8A61C-34C6-4AC4-9024-E9576AE77087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF8A61C-34C6-4AC4-9024-E9576AE77087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF8A61C-34C6-4AC4-9024-E9576AE77087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF8A61C-34C6-4AC4-9024-E9576AE77087}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5D875DE4-9BE3-4E04-8178-1F2A32D5CF3C} = {DE8BE995-0373-47C3-8588-5F20E3875776}
+		{9839929F-BEAF-4932-8DB6-A19D178D4B13} = {DE8BE995-0373-47C3-8588-5F20E3875776}
+		{CCF8A61C-34C6-4AC4-9024-E9576AE77087} = {DE8BE995-0373-47C3-8588-5F20E3875776}
 	EndGlobalSection
 EndGlobal
