@@ -14,6 +14,7 @@ namespace HeadersConsumer1
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            
             ConnectionFactory connectionFactory = new ConnectionFactory()
             {
                 HostName = "127.0.0.1",

@@ -4,6 +4,9 @@ using System.Text;
 
 namespace TopicPublish
 {
+    /// <summary>
+    /// Topic Exchange之正则表达式对RoutingKey进行归类的使用和配置
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
@@ -20,11 +23,12 @@ namespace TopicPublish
                 {
 
                     //3.发布消息 exchange、queue、routingkey 声明和绑定在consumer端
-                    for (int i = 0; i < 100000; i++)
+                    for (int i = 0; i < 10000; i++)
                     {
                         var body = Encoding.UTF8.GetBytes("hello world" + i);
-                        var level = i % 13 == 0 ? "*.com" : "*.cn";
-                        channel.BasicPublish("myexchange", level, basicProperties: null, body: body);
+                        var level = i % 13 == 0 ? i+".com" : i+".cn";
+                        var content= Encoding.UTF8.GetBytes(level);
+                        channel.BasicPublish("topicexchange", level, basicProperties: null, body: content);
                     }
                 }
 

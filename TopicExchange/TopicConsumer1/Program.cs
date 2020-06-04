@@ -1,7 +1,9 @@
-﻿using RabbitMQ.Client;
+﻿
 using System;
 using System.Text;
+using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+
 
 namespace TopicConsumer1
 {
@@ -21,7 +23,7 @@ namespace TopicConsumer1
                 using (var channel = connection.CreateModel())
                 {
                     //1.声明ExchangeType amqp direct
-                    channel.ExchangeDeclare("topicexchange", ExchangeType.Direct, true, false, null);
+                    channel.ExchangeDeclare("topicexchange", ExchangeType.Topic, true, false, null);
 
                     //2.声明队列
                     channel.QueueDeclare("topicqueue1", true, false, false, null);
@@ -37,8 +39,8 @@ namespace TopicConsumer1
                         Console.WriteLine(" [x] Received {0}", msg);
                     };
 
-                    channel.BasicConsume("log_else", true, consumer);
-                    Console.WriteLine(" Press [enter] to exit.");
+                    channel.BasicConsume("topicqueue1", true, consumer);
+                    Console.WriteLine(" Consumer1端启动完成.");
                     Console.ReadLine();
 
                 }
