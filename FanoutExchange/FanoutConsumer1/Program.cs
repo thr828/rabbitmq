@@ -21,6 +21,7 @@ namespace FanoutConsumer1
                {
                    channel.ExchangeDeclare("fanoutexchange",ExchangeType.Fanout,true,
                        false,null);
+                   //注意此处分发的consumer名称要不一样
                    channel.QueueDeclare("fanoutqueue1", true, false, false, null);
                    
                    channel.QueueBind("fanoutqueue1","fanoutexchange",string.Empty,null);
