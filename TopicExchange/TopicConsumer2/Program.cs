@@ -26,7 +26,7 @@ namespace TopicConsumer2
                     //2.声明队列
                     channel.QueueDeclare("topicqueue2", true, false, false, null);
 
-                    //3.
+                    //3.交换机和队列绑定
                     channel.QueueBind("topicqueue2", "topicexchange", "*.cn", null);
 
                     EventingBasicConsumer consumer = new EventingBasicConsumer(channel);
